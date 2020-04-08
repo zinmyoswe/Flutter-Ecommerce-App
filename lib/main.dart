@@ -1,10 +1,30 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 
 void main(){
   runApp(
     MaterialApp(
-      home: HomePage()
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
     )
   );
+}
+
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: new AppBar(
+        backgroundColor: Colors.blue,
+        title: Text('ActiveShop'),
+        actions: <Widget>[
+          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){})
+        ],
+      ),
+    );
+  }
 }
