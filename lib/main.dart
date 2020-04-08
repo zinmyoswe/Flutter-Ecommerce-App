@@ -22,8 +22,17 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.blue,
         title: Text('ActiveShop'),
         actions: <Widget>[
-          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){})
+          new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){}),
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: (){})
         ],
+      ),
+
+      drawer: new Drawer(
+        child: new ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(accountName: Text('ThuraAung'), accountEmail: Text('overmidnight12@gmail.com'))
+          ],
+        ),
       ),
     );
   }
