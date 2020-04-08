@@ -3,9 +3,20 @@ import 'package:flutter/material.dart';
 void main(){
   runApp(
     new MaterialApp(
-      home: new Container(
-        color: Colors.white,
-        child: Text('hello world'),
+      home: GridView.count(crossAxisCount: 3,
+        children: <Widget>[
+          Text('one'),
+          Text('two'),
+          Text('three'),
+
+          Text('one'),
+          Text('two'),
+          Text('three'),
+
+          Text('one'),
+          Text('two'),
+          Text('three'),
+        ],
       ),
     )
   );
