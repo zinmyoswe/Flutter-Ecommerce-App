@@ -3,6 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 
 //my own imports
 import 'package:flutterecommerce/components/horizontal_listview.dart';
+import 'package:flutterecommerce/components/products.dart';
 import 'package:flutterecommerce/components/vovolistview.dart';
 
 void main(){
@@ -138,6 +139,12 @@ class _HomePageState extends State<HomePage> {
 
           //Horizontal list view begin here
           HorizontalList(),
+
+          //padding widget
+          new Padding(padding: const EdgeInsets.all(20.0),
+            child: new Text('Recent Product'),),
+
+          //VovoList view begin here
           VovoList(),
 
         ],
