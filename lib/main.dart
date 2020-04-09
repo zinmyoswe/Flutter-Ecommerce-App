@@ -3,6 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 
 //my own imports
 import 'package:flutterecommerce/components/horizontal_listview.dart';
+import 'package:flutterecommerce/components/vovolistview.dart';
 
 void main(){
   runApp(
@@ -137,6 +138,7 @@ class _HomePageState extends State<HomePage> {
 
           //Horizontal list view begin here
           HorizontalList(),
+          VovoList(),
 
         ],
       ),
