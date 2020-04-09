@@ -25,10 +25,13 @@ class _HomePageState extends State<HomePage> {
         images: [
           AssetImage('images/a.jpg'),
           AssetImage('images/b.jpg'),
+          AssetImage('images/c.jpg'),
         ],
         autoplay: true,
         animationCurve: Curves.fastOutSlowIn,
         animationDuration: Duration(milliseconds: 1000),
+        dotSize: 4.0,
+        indicatorBgPadding: 2.0,
       ),
     );
     return Scaffold(
