@@ -9,13 +9,13 @@ class _ProductsState extends State<Products> {
   var product_list = [
     {
       "name":"Uniqlo T-SHIRT",
-      "picture": "images/products/un (1).jpg",
+      "picture": "images/products/un (2).png",
       "old_price": 18,
       "price": 14,
     },
     {
       "name":"Uniqlo T-SHIRT",
-      "picture": "images/products/un (1).png",
+      "picture": "images/products/un (3).png",
       "old_price": 18,
       "price": 14,
     },
@@ -51,8 +51,23 @@ class Single_prod extends StatelessWidget {
 });
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Text("Testing")
+    return Card(
+        child: Hero(
+          tag: prod_name,
+          child: InkWell(onTap: (){},
+          child: GridTile(
+            footer: Container(
+              color: Colors.white70,
+              child: ListTile(
+                leading: Text(prod_name, style: TextStyle(fontWeight: FontWeight.bold),),
+              ),
+            ),
+            child: Image.asset(prod_picture,
+              fit: BoxFit.cover,
+            ),
+          ),
+          )
+        ),
     );
   }
 }
