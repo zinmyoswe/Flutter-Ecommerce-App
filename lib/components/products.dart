@@ -22,7 +22,18 @@ class _ProductsState extends State<Products> {
   ];
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return GridView.builder(
+        itemCount: product_list.length,
+        gridDelegate:
+            new SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
+        itemBuilder: (BuildContext context, int index){
+          return Single_prod(
+            prod_name: product_list[index]['name'],
+            prod_picture: product_list[index]['picture'],
+            prod_old_price: product_list[index]['old_price'],
+            prod_price: product_list[index]['price'],
+          );
+        });
   }
 }
 
@@ -40,7 +51,9 @@ class Single_prod extends StatelessWidget {
 });
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Container(
+      child: Text("Testing")
+    );
   }
 }
 
