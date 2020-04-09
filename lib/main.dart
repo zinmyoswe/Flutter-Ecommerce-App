@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_pro/carousel_pro.dart';
 
 void main(){
   runApp(
@@ -17,8 +18,12 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
+    Widget image_carousel = new Container(
+
+    );
     return Scaffold(
       appBar: new AppBar(
+        elevation: 0.1,
         backgroundColor: Colors.blue,
         title: Text('ActiveShop'),
         actions: <Widget>[
