@@ -144,6 +144,12 @@ class _HomePageState extends State<HomePage> {
           new Padding(padding: const EdgeInsets.all(20.0),
             child: new Text('Recent Product'),),
 
+          //Grid View
+          Container(
+            height: 320,
+            child: Products(),
+          ),
+
           //VovoList view begin here
           VovoList(),
 
