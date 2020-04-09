@@ -57,8 +57,10 @@ class Category extends StatelessWidget {
       child: ListTile(
         title: Image.asset(
             image_location,
-            width: 150.0,
-            height: 150.0,
+            width: 100,
+            height: 100,
+            scale: 0.8,
+            fit: BoxFit.fitWidth,
         ),
         subtitle: Text(image_caption),
         ),
