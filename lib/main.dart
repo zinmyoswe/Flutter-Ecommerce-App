@@ -39,7 +39,70 @@ class _HomePageState extends State<HomePage> {
                    child: Icon(Icons.person, color: Colors.white,),
                 ),
               ),
+              decoration: new BoxDecoration(
+                color: Colors.blue[700]
+              ),
             ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('Home page'),
+                leading: Icon(Icons.home),
+              ),
+            ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('My account'),
+                leading: Icon(Icons.person),
+              ),
+            ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('My orders'),
+                leading: Icon(Icons.shopping_basket),
+              ),
+            ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('Categories'),
+                leading: Icon(Icons.dashboard),
+              ),
+            ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('Favourites'),
+                leading: Icon(Icons.favorite),
+              ),
+            ),
+
+            Divider(),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('Settings'),
+                leading: Icon(Icons.settings),
+              ),
+            ),
+
+            InkWell(
+              onTap: (){},
+              child: ListTile(
+                title: Text('About'),
+                leading: Icon(Icons.help),
+              ),
+            ),
+
+
           ],
         ),
       ),
