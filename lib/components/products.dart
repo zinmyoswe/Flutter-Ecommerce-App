@@ -99,9 +99,9 @@ class Single_prod extends StatelessWidget {
               fit: BoxFit.cover,
             ),
           ),
-          )
+          ),
         ),
-    );
+    ),);
   }
 }
 
