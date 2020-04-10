@@ -64,6 +64,28 @@ class _ProductDetailsState extends State<ProductDetails> {
              ),
            ),
 
+//      =============== first button =============================
+        Row(
+          children: <Widget>[
+            Expanded(
+              child: MaterialButton(onPressed: (){},
+              color: Colors.white,
+              textColor: Colors. grey,
+                elevation: 0.2,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: new Text("Size")
+                  ),
+                  Expanded(
+                    child: new Icon(Icons.arrow_drop_down)
+                  ),
+                ]
+              ),
+              ),
+            ),
+          ],
+        )
         ],
       ),
     );
