@@ -4,7 +4,8 @@ Ecommerce Flutter App
 
 ## Getting Started
 
-![image](https://user-images.githubusercontent.com/29988949/78936585-b24d9000-7a63-11ea-8f2f-696110aa3626.png)
+<img src="https://user-images.githubusercontent.com/29988949/78936585-b24d9000-7a63-11ea-8f2f-696110aa3626.png" width="400">
+
 
 - [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)

@@ -142,8 +142,8 @@ class _ProductDetailsState extends State<ProductDetails> {
             ),
           ),
 
-          new IconButton(icon: Icon(Icons.add_shopping_cart,color:Colors.blue),onPressed: (){}),
-          new IconButton(icon: Icon(Icons.favorite_border,color:Colors.blue),onPressed: (){}),
+          new IconButton(icon: Icon(Icons.add_shopping_cart),onPressed: (){}),
+          new IconButton(icon: Icon(Icons.favorite_border),onPressed: (){}),
           ],
           ),
         ],
