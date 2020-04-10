@@ -35,8 +35,30 @@ class _ProductDetailsState extends State<ProductDetails> {
         children: <Widget>[
            new Container(
              height: 300.0,
-             color: Colors.black,
+             child: GridTile(
+               child: Container(
+                 color: Colors.white,
+                 child: Image.asset(widget.product_detail_picture),
+               ),
+               footer: new Container(
+                 color: Colors.white,
+                 child: ListTile(
+                   leading:new Text(widget.product_detail_name),
+                   title: new Row(
+                     children: <Widget>[
+                       Expanded(
+                         child: new Text("${widget.product_detail_old_price}"),
+                       ),
+                       Expanded(
+                         child: new Text("${widget.product_detail_price}"),
+                       ),
+                     ],
+                   ),
+                 ),
+               ) ,
+             ),
            ),
+
         ],
       ),
     );
