@@ -9,25 +9,25 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list = [
     {
-      "name":"Uniqlo T-SHIRT",
+      "name":"Uniqlo T-SHIRT 1",
       "picture": "images/products/un (2).png",
       "old_price": 18,
       "price": 14,
     },
     {
-      "name":"Uniqlo T-SHIRT",
+      "name":"Uniqlo T-SHIRT 2",
       "picture": "images/products/un (3).png",
       "old_price": 18,
       "price": 14,
     },
     {
-      "name":"Uniqlo T-SHIRT",
+      "name":"Uniqlo T-SHIRT 3",
       "picture": "images/products/un (4).png",
       "old_price": 18,
       "price": 14,
     },
     {
-      "name":"Uniqlo T-SHIRT",
+      "name":"Uniqlo T-SHIRT 4",
       "picture": "images/products/un (5).png",
       "old_price": 18,
       "price": 14,
