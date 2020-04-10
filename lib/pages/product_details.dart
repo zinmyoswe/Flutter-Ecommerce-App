@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ProductDetails extends StatefulWidget {
@@ -41,16 +42,20 @@ class _ProductDetailsState extends State<ProductDetails> {
                  child: Image.asset(widget.product_detail_picture),
                ),
                footer: new Container(
-                 color: Colors.white,
+                 color: Colors.white70,
                  child: ListTile(
-                   leading:new Text(widget.product_detail_name),
+                   leading:new Text(widget.product_detail_name,
+                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                   ),
                    title: new Row(
                      children: <Widget>[
                        Expanded(
-                         child: new Text("${widget.product_detail_old_price}"),
+                         child: new Text("\$${widget.product_detail_old_price}",
+                         style: TextStyle(color: Colors.grey, decoration: TextDecoration.lineThrough),),
                        ),
                        Expanded(
-                         child: new Text("${widget.product_detail_price}"),
+                         child: new Text("\$${widget.product_detail_price}",
+                           style: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),),
                        ),
                      ],
                    ),
