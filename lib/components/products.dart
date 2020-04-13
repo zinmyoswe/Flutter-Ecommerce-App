@@ -9,6 +9,18 @@ class Products extends StatefulWidget {
 class _ProductsState extends State<Products> {
   var product_list = [
     {
+      "name":"Uniqlo T-SHIRT 5",
+      "picture": "images/products/un (1).png",
+      "old_price": 18,
+      "price": 14,
+    },
+    {
+      "name":"Uniqlo T-SHIRT 6",
+      "picture": "images/products/un (6).png",
+      "old_price": 18,
+      "price": 14,
+    },
+    {
       "name":"Uniqlo T-SHIRT 1",
       "picture": "images/products/un (2).png",
       "old_price": 18,
@@ -32,6 +44,7 @@ class _ProductsState extends State<Products> {
       "old_price": 18,
       "price": 14,
     },
+
   ];
   @override
   Widget build(BuildContext context) {
@@ -82,24 +95,15 @@ class Single_prod extends StatelessWidget {
           child: GridTile(
             footer: Container(
               color: Colors.white70,
-              child: ListTile(
-                leading: Text(prod_name, style: TextStyle(fontWeight: FontWeight.bold),
+              child: new Row(children: <Widget>[
+                Expanded(
+                  child: Text(prod_name, style: TextStyle( fontSize: 10.0),),
                 ),
-                title: Text(
-                  "\$$prod_price",
-                  style:TextStyle(
-                    color: Colors.red, fontWeight: FontWeight.w800
-                  ),
-                ),
-                subtitle: Text(
-                  "\$$prod_old_price",
-                   style: TextStyle(
-                     color: Colors.black,
-                     fontWeight: FontWeight.w800,
-                     decoration: TextDecoration.lineThrough
-                   ),
-                ),
-              ),
+
+                new Text("\$${prod_price}", style: TextStyle(color: Colors.black, fontSize: 12.0),)
+              ],),
+
+
             ),
             child: Image.asset(prod_picture,
               fit: BoxFit.cover,
