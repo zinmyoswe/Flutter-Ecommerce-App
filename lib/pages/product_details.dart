@@ -69,7 +69,23 @@ class _ProductDetailsState extends State<ProductDetails> {
           children: <Widget>[
 //      =============== Size button =============================
             Expanded(
-              child: MaterialButton(onPressed: (){},
+              child: MaterialButton(
+                onPressed: (){
+                  showDialog(context: context,
+                  builder: (context){
+                    return new AlertDialog(
+                      title: new Text("Size"),
+                      content: new Text("Choose the size"),
+                      actions: <Widget>[
+                        new MaterialButton(onPressed: (){
+                          Navigator.of(context).pop(context);
+                        },
+                        child: new Text("close"),
+                        )
+                      ],
+                    );
+                  });
+                },
               color: Colors.white,
               textColor: Colors. grey,
                 elevation: 0.2,
@@ -88,7 +104,23 @@ class _ProductDetailsState extends State<ProductDetails> {
 
             //      =============== Color button =============================
             Expanded(
-              child: MaterialButton(onPressed: (){},
+              child: MaterialButton(
+                onPressed: (){
+                  showDialog(context: context,
+                      builder: (context){
+                        return new AlertDialog(
+                          title: new Text("Color"),
+                          content: new Text("Choose the color"),
+                          actions: <Widget>[
+                            new MaterialButton(onPressed: (){
+                              Navigator.of(context).pop(context);
+                            },
+                              child: new Text("close"),
+                            )
+                          ],
+                        );
+                      });
+                },
                 color: Colors.white,
                 textColor: Colors. grey,
                 elevation: 0.2,
@@ -107,7 +139,23 @@ class _ProductDetailsState extends State<ProductDetails> {
 
             //      =============== Qty button =============================
             Expanded(
-              child: MaterialButton(onPressed: (){},
+              child: MaterialButton(
+                onPressed: (){
+                  showDialog(context: context,
+                      builder: (context){
+                        return new AlertDialog(
+                          title: new Text("Qty"),
+                          content: new Text("Choose the qty"),
+                          actions: <Widget>[
+                            new MaterialButton(onPressed: (){
+                              Navigator.of(context).pop(context);
+                            },
+                              child: new Text("close"),
+                            )
+                          ],
+                        );
+                      });
+                },
                 color: Colors.white,
                 textColor: Colors. grey,
                 elevation: 0.2,
@@ -145,6 +193,42 @@ class _ProductDetailsState extends State<ProductDetails> {
           new IconButton(icon: Icon(Icons.add_shopping_cart),onPressed: (){}),
           new IconButton(icon: Icon(Icons.favorite_border),onPressed: (){}),
           ],
+          ),
+
+          Divider(),
+          new ListTile(
+            title: new Text("Product details"),
+            subtitle: new Text("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"),
+          ),
+          Divider(),
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0,5.0,5.0,5.0),
+                child: new Text("Product name", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                child: new Text(widget.product_detail_name),
+                ),
+            ],
+          ),
+
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0,5.0,5.0,5.0),
+                child: new Text("Product brand", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                child: new Text("Uniqlo"),
+              ),
+            ],
+          ),
+
+          new Row(
+            children: <Widget>[
+              Padding(padding: const EdgeInsets.fromLTRB(12.0,5.0,5.0,5.0),
+                child: new Text("Product condition", style: TextStyle(color: Colors.grey),),),
+                Padding(padding: EdgeInsets.all(5.0),
+                child: new Text("New"),
+              ),
+            ],
           ),
         ],
       ),
