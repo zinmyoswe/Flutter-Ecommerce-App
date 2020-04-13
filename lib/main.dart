@@ -37,6 +37,7 @@ class _HomePageState extends State<HomePage> {
         animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,
         indicatorBgPadding: 2.0,
+        dotBgColor: Colors.transparent,
       ),
     );
     return Scaffold(
@@ -71,7 +72,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('Home page'),
-                leading: Icon(Icons.home),
+                leading: Icon(Icons.home, color: Colors.blue[700],),
               ),
             ),
 
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('My account'),
-                leading: Icon(Icons.person),
+                leading: Icon(Icons.person, color: Colors.blue[700]),
               ),
             ),
 
@@ -87,15 +88,15 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('My orders'),
-                leading: Icon(Icons.shopping_basket),
+                leading: Icon(Icons.shopping_basket, color: Colors.blue[700]),
               ),
             ),
 
             InkWell(
               onTap: (){},
               child: ListTile(
-                title: Text('Categories'),
-                leading: Icon(Icons.dashboard),
+                title: Text('Shopping Cart'),
+                leading: Icon(Icons.shopping_cart, color: Colors.blue[700]),
               ),
             ),
 
@@ -103,7 +104,7 @@ class _HomePageState extends State<HomePage> {
               onTap: (){},
               child: ListTile(
                 title: Text('Favourites'),
-                leading: Icon(Icons.favorite),
+                leading: Icon(Icons.favorite, color: Colors.blue[700]),
               ),
             ),
 
