@@ -232,6 +232,12 @@ class _ProductDetailsState extends State<ProductDetails> {
             ],
           ),
 
+          Divider(),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: new Text("Similar Products"),
+          ),
+
 //          Similar_products Section
         Container(
           height: 360,
