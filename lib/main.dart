@@ -5,6 +5,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutterecommerce/components/horizontal_listview.dart';
 import 'package:flutterecommerce/components/products.dart';
 import 'package:flutterecommerce/components/vovolistview.dart';
+import 'package:flutterecommerce/pages/cart.dart';
 
 void main(){
   runApp(
@@ -47,7 +48,10 @@ class _HomePageState extends State<HomePage> {
         title: Text('ActiveShop'),
         actions: <Widget>[
           new IconButton(icon: Icon(Icons.search, color: Colors.white,), onPressed: (){}),
-          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,), onPressed: (){})
+          new IconButton(icon: Icon(Icons.shopping_cart, color: Colors.white,),
+              onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              }),
         ],
       ),
 
@@ -93,7 +97,9 @@ class _HomePageState extends State<HomePage> {
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
                 title: Text('Shopping Cart'),
                 leading: Icon(Icons.shopping_cart, color: Colors.blue[700]),
