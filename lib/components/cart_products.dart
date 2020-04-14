@@ -21,7 +21,7 @@ class _Cart_productsState extends State<Cart_products> {
       "picture": "images/products/un (6).png",
       "old_price": 18,
       "price": 14,
-      "size": "M",
+      "size": "S",
       "color": "White",
       "quantity": "1",
     },
@@ -30,10 +30,48 @@ class _Cart_productsState extends State<Cart_products> {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 3,
+      itemCount: Products_on_the_cart.length,
       itemBuilder: (context, index){
-        return new Text("aa");
+        return Single_cart_product(
+          cart_prod_name: Products_on_the_cart[index]["name"],
+          cart_prod_picture: Products_on_the_cart[index]["picture"],
+          cart_prod_old_price: Products_on_the_cart[index]["old_price"],
+          cart_prod_price: Products_on_the_cart[index]["price"],
+          cart_prod_size: Products_on_the_cart[index]["size"],
+          cart_prod_color: Products_on_the_cart[index]["color"],
+          cart_prod_qty: Products_on_the_cart[index]["quantity"],
+        );
       }
     );
   }
 }
+
+class Single_cart_product extends StatelessWidget {
+  final cart_prod_name;
+  final cart_prod_picture;
+  final cart_prod_old_price;
+  final cart_prod_price;
+  final cart_prod_size;
+  final cart_prod_color;
+  final cart_prod_qty;
+
+  Single_cart_product({
+    this.cart_prod_name,
+    this.cart_prod_picture,
+    this.cart_prod_old_price,
+    this.cart_prod_price,
+    this.cart_prod_size,
+    this.cart_prod_color,
+    this.cart_prod_qty,
+ });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      child: ListTile(
+        title: new Text(cart_prod_name),
+      ),
+    );
+  }
+}
+
