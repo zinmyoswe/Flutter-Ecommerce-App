@@ -142,18 +142,26 @@ class _HomePageState extends State<HomePage> {
 
           //padding widget
           new Padding(padding: const EdgeInsets.all(8.0),
-          child: new Text('Categories'),),
+          child: new Text('SHOP BY CATEGORY',style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+          ),),),
 
           //Horizontal list view begin here
           HorizontalList(),
 
           //padding widget
           new Padding(padding: const EdgeInsets.all(20.0),
-            child: new Text('Recent Product'),),
+            child: new Text('RECENTLY VIEWED ITEMS',style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),),),
 
           //Grid View
           Container(
-            height: 320,
+            height: 380,
             child: Products(),
           ),
 
