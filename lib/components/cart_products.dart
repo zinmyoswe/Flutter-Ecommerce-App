@@ -68,9 +68,63 @@ class Single_cart_product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+
       child: ListTile(
-        title: new Text(cart_prod_name),
+        leading: new Image.asset(cart_prod_picture, width: 80,
+        height: 80,),
+        title: new Text(cart_prod_name,style: TextStyle(
+            fontSize: 14,
+            fontWeight: FontWeight.bold,
+            color: Colors.black
+        ),),
+        subtitle: new Column(
+          children: <Widget>[
+//            ====Product price section start====
+            new Container(
+              alignment: Alignment.topLeft,
+              child: new Text(
+                "\$${cart_prod_price}",
+                style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black
+                ),
+              ),
+            ),
+//            ====Product price and Size start====
+            new Row(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: new Text("Size:"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: new Text(cart_prod_size),
+                ),
+
+                new Padding(padding: const EdgeInsets.fromLTRB(20, 8, 8, 8),
+                    child: new Text("Color:"),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(1.0),
+                  child: new Text(cart_prod_color),
+                ),
+
+              ],
+            ),
+          ],
+        ),
+        trailing: new Column(
+
+          children: <Widget>[
+            new IconButton(icon: Icon(Icons.arrow_drop_up), onPressed: (){}),
+            new Text(cart_prod_qty),
+            new IconButton(icon: Icon(Icons.arrow_drop_down), onPressed: (){}),
+          ],
+        ),
       ),
+
     );
   }
 }
